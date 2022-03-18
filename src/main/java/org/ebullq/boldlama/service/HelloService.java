@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 @Service
 public class HelloService {
 
-    private static final String HELLO_MESSAGE = "Hello";
+    private static final String HELLO_MESSAGE = "Hello world";
 
     public Mono<Greeting> getGreetings() {
         Greeting hello = new Greeting(HELLO_MESSAGE);
