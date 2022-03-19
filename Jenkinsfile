@@ -7,11 +7,6 @@ pipeline {
                 sh "mvn -DskipTests clean package"
             }
         }
-        stage('Testing') {
-            steps {
-                sh "mvn test"
-            }
-        }
         stage("Docker build") {
             steps {
                 sh 'docker version'
