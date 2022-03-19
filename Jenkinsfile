@@ -21,9 +21,11 @@ pipeline {
             }
         }
         stage("Docker Login") {
+            steps {
                 withCredentials([string(credentialsId: 'DOCKER_HUB_PASSWORD', variable: 'PASSWORD')]) {
                     sh 'docker login -u ebullq -p $PASSWORD'
                 }
+            }
         }
         stage("Push Image to Docker Hub") {
              steps {
